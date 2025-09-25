@@ -3,24 +3,25 @@ VARIABLE KEYS
 */
 :root {
 	--clr-red: hsl(0, 100%, 67%);
-	--clr-reda: hsl(0, 100%, 67%, 0.1);
 	--clr-yellow: hsl(39, 100%, 56%);
-	--clr-yellowa: hsl(39, 100%, 56%, 0.1);
 	--clr-teal: hsl(166, 100%, 37%);
-	--clr-teala: hsl(166, 100%, 37%, 0.1);
 	--clr-blue-600: hsl(234, 85%, 45%);
-	--clr-blue-600a: hsl(234, 85%, 45%, 0.1);
 	--clr-white: hsl(0, 0%, 100%);
 	--clr-text-blue-100: hsl(221, 100%, 96%);
-	--clr-text-blue-100a: hsl(221, 100%, 96%, 0.72);
 	--clr-bg-lavender: hsl(241, 100%, 89%);
 	--clr-blue-700: hsl(224, 30%, 27%);
-	--clr-blue-700a: hsl(224, 30%, 27%, 0.87);
 
 	--clr-grad-bg-purple: hsl(252, 100%, 67%);
 	--clr-grad-bg-blue: hsl(241, 81%, 54%);
 	--clr-grad-bubble-blue-500: hsla(256, 72%, 46%);
 	--clr-grad-bubble-blue-700: hsla(241, 72%, 46%, 0.23);
+
+	--clr-reda: hsl(0, 100%, 67%, 0.1);
+	--clr-yellowa: hsl(39, 100%, 56%, 0.1);
+	--clr-teala: hsl(166, 100%, 37%, 0.1);
+	--clr-blue-600a: hsl(234, 85%, 45%, 0.1);
+	--clr-text-blue-100a: hsl(221, 100%, 96%, 0.72);
+	--clr-blue-700a: hsl(224, 30%, 27%, 0.87);
 
 	--fnt-fam: "Hanken Grotesk";
 	--fnt-wgt-normal: 500;
@@ -123,16 +124,23 @@ body {
 	font-family: var(--fnt-fam);
 	font-size: 1rem;
 	background-color: var(--clr-text-blue-100);
+	width: 100vw;
+	height: 100vh;
 }
 
 .flex {
 	display: flex;
 }
 
+.body--flex {
+	justify-content: center;
+	align-items: center;
+}
 /* 
 LAYOUT
 */
 
+.result--flex,
 .result__total--flex,
 .result__total__bubble--flex {
 	flex-direction: column;
@@ -151,7 +159,6 @@ LAYOUT
 
 .result {
 	max-width: 700px;
-	margin: 0 auto;
 }
 
 .result__total {
@@ -174,8 +181,8 @@ LAYOUT
 		16%,
 		var(--clr-grad-bubble-blue-700) 80%
 	);
-	width: 150px;
-	height: 150px;
+	width: 160px;
+	height: 160px;
 	border-radius: 50%;
 }
 
@@ -224,32 +231,36 @@ TYPOGRAPHY
 	font-weight: var(--fnt-wgt-xbold);
 }
 
+.result__total__title,
+.result__summary__title {
+	font-size: 1.2rem;
+}
+
 .result__total__title {
-	font-size: 1rem;
 	margin-bottom: 1em;
 	font-weight: var(--fnt-wgt-normal);
 	color: var(--clr-text-blue-100a);
 }
 
 .result__total__bubble__info__score {
-	font-size: 3em;
+	font-size: 3.6rem;
 	display: block;
-	padding: 0em;
 	line-height: 1.4;
 }
 
 .result__total__remark {
-	font-size: 1.4rem;
+	font-size: 1.6rem;
+	margin-bottom: 0.4em;
 }
 
 .result__total__description {
 	line-height: 1.4;
 	margin-bottom: 2em;
+	font-size: 1.1rem;
 	color: var(--clr-text-blue-100a);
 }
 
 .result__summary__title {
-	font-size: 1.16rem;
 	color: var(--clr-blue-700);
 	margin-bottom: 1em;
 }
@@ -279,7 +290,7 @@ ASSETS
 */
 
 .result__summary__breakdown__info__img {
-	margin-right: 0.5em;
+	margin-right: 0.7em;
 }
 
 button {
@@ -294,7 +305,38 @@ button {
 	border: none;
 }
 
+button:active,
+button:hover {
+	background-image: linear-gradient(
+		var(--clr-grad-bg-purple),
+		30%,
+		var(--clr-grad-bg-blue) 85%
+	);
+	cursor: pointer;
+}
 
 /* 
-
+MOBILE VIEW
 */
+
+@media (min-width: 700px) {
+	.result {
+		background-color: var(--clr-white);
+		margin-top: 3em;
+		border-radius: 32px;
+	}
+
+	.result__total,
+	.result__summary {
+		width: 50%;
+		border-radius: 32px;
+	}
+
+	.result--flex {
+		flex-direction: row;
+	}
+
+	.result__summary {
+		padding: 1.2em 2em;
+	}
+}
