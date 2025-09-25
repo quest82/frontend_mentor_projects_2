@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/images/favicon-32x32.png"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<title>Frontend Mentor | Results summary component</title>
+	</head>
+	<body>
+		<main class="result">
+			<section class="result__total flex result__total--flex">
+				<h1 class="result__total__title">Your Result</h1>
+				<div class="result__total__bubble flex result__total__bubble--flex">
+					<p class="result__total__bubble__info">
+						<span class="result__total__bubble__info__score">76</span> of 100
+					</p>
+				</div>
+
+				<p class="result__total__remark">Great</p>
+				<p class="result__total__description">
+					You scored higher than
+					<span class="result__total__description__data">65%</span> of the
+					people who have taken these tests.
+				</p>
+			</section>
+
+			<section class="result__summary">
+				<h1 class="result__summary__title">Summary</h1>
+				<div
+					class="result__summary__breakdown flex result__summary__breakdown--flex"
+				>
+					<div
+						class="result__summary__breakdown__info flex result__summary__breakdown__info--flex"
+					>
+						<div class="result__summary__breakdown__info__img">
+							<img src="./assets/images/icon-reaction.svg" alt="" />
+						</div>
+						<p
+							class="result__summary__breakdown__info__name result__summary__breakdown__info__name--red"
+						>
+							Reaction
+						</p>
+					</div>
+					<p class="result__summary__breakdown__score">
+						<span class="result__summary__breakdown__score__data">80</span> /
+						100
+					</p>
+				</div>
+
+				<div
+					class="result__summary__breakdown flex result__summary__breakdown--flex"
+				>
+					<div
+						class="result__summary__breakdown__info flex result__summary__breakdown__info--flex"
+					>
+						<div class="result__summary__breakdown__info__img">
+							<img src="./assets/images/icon-memory.svg" alt="" />
+						</div>
+						<p
+							class="result__summary__breakdown__info__name result__summary__breakdown__info__name--yellow"
+						>
+							Memory
+						</p>
+					</div>
+					<p class="result__summary__breakdown__score">
+						<span class="result__summary__breakdown__score__data">92</span> /
+						100
+					</p>
+				</div>
+
+				<div
+					class="result__summary__breakdown flex result__summary__breakdown--flex"
+				>
+					<div
+						class="result__summary__breakdown__info flex result__summary__breakdown__info--flex"
+					>
+						<div class="result__summary__breakdown__info__img">
+							<img src="./assets/images/icon-verbal.svg" alt="" />
+						</div>
+						<p
+							class="result__summary__breakdown__info__name result__summary__breakdown__info__name--teal"
+						>
+							Verbal
+						</p>
+					</div>
+					<p class="result__summary__breakdown__score">
+						<span class="result__summary__breakdown__score__data">61</span> /
+						100
+					</p>
+				</div>
+
+				<div
+					class="result__summary__breakdown flex result__summary__breakdown--flex"
+				>
+					<div
+						class="result__summary__breakdown__info flex result__summary__breakdown__info--flex"
+					>
+						<div class="result__summary__breakdown__info__img">
+							<img src="./assets/images/icon-visual.svg" alt="" />
+						</div>
+						<p
+							class="result__summary__breakdown__info__name result__summary__breakdown__info__name--blue"
+						>
+							Visual
+						</p>
+					</div>
+					<p class="result__summary__breakdown__score">
+						<span class="result__summary__breakdown__score__data">72</span> /
+						100
+					</p>
+				</div>
+				<button type="submit">Continue</button>
+			</section>
+		</main>
+	</body>
+</html>

@@ -1,0 +1,300 @@
+/* 
+VARIABLE KEYS
+*/
+:root {
+	--clr-red: hsl(0, 100%, 67%);
+	--clr-reda: hsl(0, 100%, 67%, 0.1);
+	--clr-yellow: hsl(39, 100%, 56%);
+	--clr-yellowa: hsl(39, 100%, 56%, 0.1);
+	--clr-teal: hsl(166, 100%, 37%);
+	--clr-teala: hsl(166, 100%, 37%, 0.1);
+	--clr-blue-600: hsl(234, 85%, 45%);
+	--clr-blue-600a: hsl(234, 85%, 45%, 0.1);
+	--clr-white: hsl(0, 0%, 100%);
+	--clr-text-blue-100: hsl(221, 100%, 96%);
+	--clr-text-blue-100a: hsl(221, 100%, 96%, 0.72);
+	--clr-bg-lavender: hsl(241, 100%, 89%);
+	--clr-blue-700: hsl(224, 30%, 27%);
+	--clr-blue-700a: hsl(224, 30%, 27%, 0.87);
+
+	--clr-grad-bg-purple: hsl(252, 100%, 67%);
+	--clr-grad-bg-blue: hsl(241, 81%, 54%);
+	--clr-grad-bubble-blue-500: hsla(256, 72%, 46%);
+	--clr-grad-bubble-blue-700: hsla(241, 72%, 46%, 0.23);
+
+	--fnt-fam: "Hanken Grotesk";
+	--fnt-wgt-normal: 500;
+	--fnt-wgt-bold: 700;
+	--fnt-wgt-xbold: 800;
+}
+
+/* 
+FONT IMPORT
+*/
+
+/* Hanken Grotesk */
+
+@font-face {
+	font-family: "Hanken Grotesk";
+	src: url(./assets/fonts/HankenGrotesk-VariableFont_wght.ttf)
+		format("truetype-variations");
+	font-weight: 1 999;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* 
+CSS RESET
+ */
+
+/*
+  1. Use a more-intuitive box-sizing model
+  2. Remove default margin
+*/
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+	line-height: 1.7;
+	-webkit-font-smoothing: antialiased;
+}
+
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+/*
+  8. Remove underline from anchor links
+*/
+
+a,
+a:visited,
+a:active {
+	text-decoration: none;
+}
+
+/* 
+GLOBAL
+*/
+
+body {
+	font-family: var(--fnt-fam);
+	font-size: 1rem;
+	background-color: var(--clr-text-blue-100);
+}
+
+.flex {
+	display: flex;
+}
+
+/* 
+LAYOUT
+*/
+
+.result__total--flex,
+.result__total__bubble--flex {
+	flex-direction: column;
+}
+
+.result__summary__breakdown,
+.result__total--flex,
+.result__summary__breakdown__info--flex {
+	align-items: center;
+}
+
+.result__summary__breakdown--flex,
+.result__summary__breakdown__info--flex {
+	justify-content: space-between;
+}
+
+.result {
+	max-width: 700px;
+	margin: 0 auto;
+}
+
+.result__total {
+	color: var(--clr-text-blue-100);
+	text-align: center;
+	padding: 1.2em 3.2em;
+	border-bottom-left-radius: 40px;
+	border-bottom-right-radius: 40px;
+	background-image: linear-gradient(
+		var(--clr-grad-bg-purple),
+		30%,
+		var(--clr-grad-bg-blue) 85%
+	);
+}
+
+.result__total__bubble {
+	margin-bottom: 1em;
+	background-image: linear-gradient(
+		var(--clr-grad-bubble-blue-500),
+		16%,
+		var(--clr-grad-bubble-blue-700) 80%
+	);
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+}
+
+.result__total__bubble--flex {
+	justify-content: center;
+}
+
+.result__summary {
+	padding: 1em 1.7em;
+}
+
+.result__summary__breakdown {
+	margin-bottom: 1em;
+	padding: 0.7em;
+	border-radius: 9px;
+}
+
+.result__summary__breakdown:nth-of-type(1) {
+	background-color: var(--clr-reda);
+}
+
+.result__summary__breakdown:nth-of-type(2) {
+	background-color: var(--clr-yellowa);
+}
+
+.result__summary__breakdown:nth-of-type(3) {
+	background-color: var(--clr-teala);
+}
+
+.result__summary__breakdown:nth-of-type(4) {
+	background-color: var(--clr-blue-600a);
+	margin-bottom: 1.7em;
+}
+
+/* 
+TYPOGRAPHY
+*/
+
+.result__summary__breakdown__info__name,
+.result__total__remark {
+	font-weight: var(--fnt-wgt-bold);
+}
+
+.result__summary__breakdown__score__data,
+.result__total__bubble__info__score {
+	font-weight: var(--fnt-wgt-xbold);
+}
+
+.result__total__title {
+	font-size: 1rem;
+	margin-bottom: 1em;
+	font-weight: var(--fnt-wgt-normal);
+	color: var(--clr-text-blue-100a);
+}
+
+.result__total__bubble__info__score {
+	font-size: 3em;
+	display: block;
+	padding: 0em;
+	line-height: 1.4;
+}
+
+.result__total__remark {
+	font-size: 1.4rem;
+}
+
+.result__total__description {
+	line-height: 1.4;
+	margin-bottom: 2em;
+	color: var(--clr-text-blue-100a);
+}
+
+.result__summary__title {
+	font-size: 1.16rem;
+	color: var(--clr-blue-700);
+	margin-bottom: 1em;
+}
+
+.result__summary__breakdown__info__name--red {
+	color: var(--clr-red);
+}
+
+.result__summary__breakdown__info__name--yellow {
+	color: var(--clr-yellow);
+}
+
+.result__summary__breakdown__info__name--teal {
+	color: var(--clr-teal);
+}
+
+.result__summary__breakdown__info__name--blue {
+	color: var(--clr-blue-600);
+}
+
+.result__summary__breakdown__score {
+	color: var(--clr-blue-700a);
+}
+
+/* 
+ASSETS
+*/
+
+.result__summary__breakdown__info__img {
+	margin-right: 0.5em;
+}
+
+button {
+	text-align: center;
+	width: 100%;
+	padding: 0.88em;
+	font-weight: var(--fnt-wgt-bold);
+	font-size: 1.06rem;
+	background-color: var(--clr-blue-700);
+	color: var(--clr-white);
+	border-radius: 30px;
+	border: none;
+}
+
+
+/* 
+
+*/
