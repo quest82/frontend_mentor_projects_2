@@ -30,10 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
-
-## My process
+- Solution URL: [Add solution URL here](https://github.com/quest82/frontend_mentor_projects_2/tree/master/01_Results_Summary_Component)
+- Live Site URL: [Add live site URL here](https://super-blancmange-209bf4.netlify.app/)
 
 ### Built with
 
