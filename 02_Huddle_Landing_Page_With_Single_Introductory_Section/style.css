@@ -1,0 +1,230 @@
+/* 
+VARIABLE KEYS
+*/
+
+:root {
+	--clr-violet: hsl(257, 40%, 49%);
+	--clr-magenta: hsl(300, 69%, 71%);
+	--clr-white: hsl(0, 0%, 100%);
+
+	--fnt-fam-P: "Poppins";
+	--fnt-fam-O: "Open Sans";
+}
+
+/* 
+FONTS
+*/
+
+/* ----- Poppins ----- */
+
+@font-face {
+	font-family: "Poppins";
+	src: url(./poppins/Poppins-Regular.ttf) format("truetype");
+	font-size: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Poppins";
+	src: url(./poppins/Poppins-SemiBold.ttf) format("truetype");
+	font-size: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* ----- Open Sans ----- */
+
+@font-face {
+	font-family: "Open Sans";
+	src: url(./open_sans/OpenSans-Regular.ttf) format("truetype");
+	font-size: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* 
+CSS RESET
+ */
+
+/*
+  1. Use a more-intuitive box-sizing model.
+  2. Remove default margin
+*/
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+	line-height: 1.7;
+	-webkit-font-smoothing: antialiased;
+}
+
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+/*
+  8. Remove underline from anchor links
+*/
+
+a,
+a:visited,
+a:active {
+	text-decoration: none;
+}
+
+/* 
+GLOBAL
+*/
+
+body {
+	background-color: var(--clr-violet);
+	color: var(--clr-white);
+}
+
+.body--mobile {
+	background-image: url(./images/bg-mobile.svg);
+	background-repeat: no-repeat;
+}
+
+.header,
+.main,
+.footer {
+	max-width: 1200px;
+	margin-left: 2em;
+	margin-right: 2em;
+}
+
+.flex {
+	display: flex;
+}
+
+.main--flex {
+	flex-direction: column;
+}
+
+.footer--flex {
+	justify-content: center;
+}
+/* 
+TYPOGRAPHY
+*/
+
+.main {
+	text-align: center;
+}
+
+.main__copy__content,
+button {
+	font-family: var(--fnt-fam-O);
+}
+
+.main__copy__title {
+	font-family: var(--fnt-fam-P);
+	font-weight: 400;
+	font-size: 1.4rem;
+	margin-bottom: 0.4em;
+}
+
+.main__copy__content {
+	font-weight: 400;
+	line-height: 1.5;
+	margin: 0 0.5em 1.7em;
+}
+
+/* 
+ASSETS
+*/
+
+.header__logo {
+	width: 130px;
+	margin-top: 2em;
+	margin-bottom: 3.2em;
+}
+
+.main__heroImg {
+	margin-bottom: 2.6em;
+}
+
+.footer__icons {
+	color: white;
+}
+
+button {
+	color: var(--clr-violet);
+	width: 80%;
+	padding: 0.47em;
+	border-radius: 20px;
+	border: none;
+	font-size: 0.9rem;
+	margin-bottom: 5em;
+}
+
+.footer__icons__fb,
+.footer__icons__tw,
+.footer__icons__ig {
+	border: 1px solid var(--clr-white);
+	padding: 0.1em 0.4em;
+	margin-right: 0.9em;
+	border-radius: 50%;
+}
+
+.fa-brands {
+	font-size: 13px;
+}
+
+/* 
+DESKTOP
+*/
+
+@media(min-width: 900px) {
+    .body--mobile {
+        display: none;
+    }
+
+    .body--desktop {
+        display: block;
+    }
+}
