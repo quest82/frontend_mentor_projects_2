@@ -132,10 +132,6 @@ body {
 	display: flex;
 }
 
-.body--flex {
-	justify-content: center;
-	align-items: center;
-}
 /* 
 LAYOUT
 */
@@ -320,6 +316,11 @@ MOBILE VIEW
 */
 
 @media (min-width: 700px) {
+	.body--flex {
+		justify-content: center;
+		align-items: center;
+	}
+
 	.result {
 		background-color: var(--clr-white);
 		margin-top: 3em;
