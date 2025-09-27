@@ -122,9 +122,6 @@ GLOBAL
 body {
 	background-color: var(--clr-violet);
 	color: var(--clr-white);
-}
-
-.body--mobile {
 	background-image: url(./images/bg-mobile.svg);
 	background-repeat: no-repeat;
 }
@@ -132,7 +129,7 @@ body {
 .header,
 .main,
 .footer {
-	max-width: 1200px;
+	max-width: 1400px;
 	margin-left: 2em;
 	margin-right: 2em;
 }
@@ -219,12 +216,54 @@ button {
 DESKTOP
 */
 
-@media(min-width: 900px) {
-    .body--mobile {
-        display: none;
-    }
+@media (min-width: 900px) {
+	body {
+		background-image: url(./images/bg-desktop.svg);
+		background-repeat: no-repeat;
+		background-position: -.8em -2em;
+	}
 
-    .body--desktop {
-        display: block;
-    }
+	.header,
+	.main,
+	.footer {
+		margin-left: 6em;
+		margin-right: 6em;
+	}
+
+	.header__logo {
+		width: 160px;
+		margin-bottom: 4em;
+	}
+
+	.main {
+		margin-bottom: 3em;
+	}
+
+	.main--flex {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.main__heroImg,
+	.main__copy {
+		width: 47%;
+	}
+
+	.main__copy {
+		text-align: left;
+		margin-top: 1em;
+	}
+
+	.main__copy__title {
+		font-size: 2.4rem;
+	}
+
+	button {
+		width: 30%;
+		padding: 0.6em;
+	}
+
+	.footer--flex {
+		justify-content: end;
+	}
 }
