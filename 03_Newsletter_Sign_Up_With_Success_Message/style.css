@@ -1,0 +1,324 @@
+/* 
+VARIABLE KEYS
+*/
+
+:root {
+	--clr-red: hsl(4, 100%, 67%);
+	--clr-red-a: hsla(4, 100%, 67%, 0.2);
+	--clr-pink: hsl(329, 100%, 67%);
+	--clr-blue-700: hsl(234, 29%, 20%);
+	--clr-blue-800: hsl(235, 18%, 26%);
+	--clr-grey: hsl(0, 0%, 58%);
+	--clr-grey-a: hsla(0, 0%, 58%, 0.7);
+	--clr-white: hsl(0, 0%, 100%);
+
+	--fnt-fam: "Roboto";
+	--fnt-400: 400;
+	--fnt-700: 700;
+}
+
+/* 
+FONT
+*/
+
+@font-face {
+	font-family: "Roboto";
+	src: url(./assets/fonts/Roboto-VariableFont_wght.ttf)
+		format("truetype-variations");
+	font-weight: 1 999;
+	font-display: swap;
+	font-style: normal;
+}
+
+/* 
+CSS RESET
+ */
+
+/*
+  1. Use a more-intuitive box-sizing model.
+  2. Remove default margin
+*/
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+	line-height: 1.4;
+	-webkit-font-smoothing: antialiased;
+}
+
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+/*
+  8. Remove underline from anchor links
+*/
+
+a,
+a:visited,
+a:active {
+	text-decoration: none;
+}
+
+/* ----- MOBILE VIEW ----- */
+
+/* 
+GLOBAL
+*/
+
+body {
+	font-family: var(--fnt-fam);
+	font-size: 1rem;
+	font-weight: var(--fnt-400);
+	color: var(--clr-blue-800);
+}
+
+.flex {
+	display: flex;
+}
+
+/* 
+LAYOUT
+*/
+
+.signUp--flex {
+	flex-direction: column;
+}
+
+.success {
+	display: none;
+}
+
+.signUp__copy,
+.success {
+	padding: 1.45em;
+}
+
+.signUp__copy__text {
+	margin-bottom: 1em;
+}
+
+.signUp__copy__description {
+	margin-left: 1.4em;
+	margin-bottom: 2.4em;
+}
+
+.signUp__copy__description__item {
+	margin-bottom: 0.3em;
+	padding-left: 0.7em;
+	list-style: none;
+	position: relative;
+}
+
+.signUp__copy__description__item::before {
+	content: "";
+	display: inline-block;
+	background-image: url(./assets/images/icon-list.svg);
+	background-size: contain;
+	width: 19px;
+	height: 19px;
+	position: absolute;
+	left: -1.4em;
+	top: 0.1em;
+}
+
+/* 
+TYPOGRAPHY
+*/
+
+.signUp__copy__title {
+	font-size: 2.35rem;
+	font-weight: var(--fnt-700);
+	margin-bottom: 0.3em;
+}
+
+.success__title {
+	font-size: 2.7rem;
+	line-height: 1.2;
+	margin-bottom: 0.6em;
+}
+
+label,
+.emailWarning {
+	font-size: 0.8rem;
+	font-weight: var(--fnt-700);
+	margin-bottom: 0.67em;
+}
+
+.emailWarning {
+	width: 190px;
+	color: var(--clr-red);
+	display: none;
+}
+
+.success__copy {
+	margin-bottom: 15em;
+	font-size: 1.2rem;
+}
+
+.success__copy__info {
+	font-weight: var(--fnt-700);
+}
+/* 
+ASSETS
+*/
+
+.signUp__heroImg {
+	margin-top: -9px;
+}
+
+label,
+input,
+.success__btn {
+	display: block;
+	width: 100%;
+}
+
+input {
+	padding: 0.88em 1.45em;
+	border-radius: 7px;
+	outline: none;
+}
+
+.emailInput {
+	border: 1px solid var(--clr-grey-a);
+	color: var(--clr-blue-700);
+	margin-bottom: 1.57em;
+}
+
+.emailInput:focus {
+	border: 1px solid var(--clr-blue-700);
+}
+
+.inputWarning {
+	background-color: var(--clr-red-a);
+	color: var(--clr-red);
+}
+
+.inputWarning,
+.inputWarning:focus {
+	border: 2px solid var(--clr-red);
+}
+
+.submit__btn,
+.success__btn {
+	border: none;
+	background-color: var(--clr-blue-700);
+	color: var(--clr-white);
+	font-weight: var(--fnt-600);
+	font-size: 0.95rem;
+}
+
+.submit__btn:hover,
+.success__btn:hover {
+	background-image: linear-gradient(
+		to right,
+		var(--clr-pink),
+		30%,
+		var(--clr-red)
+	);
+	cursor: pointer;
+}
+
+.success__btn {
+	padding: 1.2em;
+	border-radius: 9px;
+	font-size: 1rem;
+	font-weight: var(--fnt-700);
+}
+
+.success__img {
+	margin-bottom: 3em;
+	margin-top: 9em;
+}
+
+/* ----- DESKTOP VIEW ----- */
+
+@media (min-width: 1000px) {
+	body {
+		background-color: var(--clr-blue-800);
+		display: flex;
+		height: 100vh;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.signUp--flex {
+		flex-direction: row-reverse;
+	}
+
+	.success,
+	.signUp {
+		background-color: var(--clr-white);
+		border-radius: 25px;
+	}
+
+	.signUp {
+		max-width: 800px;
+		padding: 1.7em;
+	}
+
+	.signUp__copy__title,
+	.success__title {
+		font-size: 3rem;
+	}
+
+	.success {
+		display: none;
+		padding: 2em 3.3em 4em;
+		max-width: 500px;
+		margin-top: 0;
+	}
+
+	.success__img {
+		margin-bottom: 1.9em;
+		margin-top: 0;
+	}
+
+	.success__copy {
+		margin-bottom: 2.4em;
+		font-size: 1rem;
+	}
+}
